@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pet Chores</string>
+    <string name="title_today">Today</string>
+    <string name="title_pets">Pets</string>
+    <string name="title_household">Household</string>
+    <string name="title_timeline">Timeline</string>
+</resources>
