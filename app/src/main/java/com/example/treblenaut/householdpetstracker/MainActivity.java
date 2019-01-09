@@ -3,9 +3,12 @@ package com.example.treblenaut.householdpetstracker;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
         //Loading the default fragment
         loadFragment(new TodayFragment());
+
+        //FAB
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Here's a snackbar", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         //Bottom navigation view and its listener
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
